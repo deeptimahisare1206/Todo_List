@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<html>
+<head>
+<style>
+body {
+	display: grid;
+	place-items: center;	
+background-color: black;
+}
+form{
+}
+</style>
+</head>
+<body>
+	<h2>Student Form</h2>
+	<form action="Register" method="get">
+		<label>Name:</label><input type="text" name="name"><label>Roll
+			No.: </label> <input type="number" name="roll"> <label>Percent:
+		</label><input type="number" name="percent"> <input type="submit"
+			value="Submit">
+	</form>
+</body>
+</html>

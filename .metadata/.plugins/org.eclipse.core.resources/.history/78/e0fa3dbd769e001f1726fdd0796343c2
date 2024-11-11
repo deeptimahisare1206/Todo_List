@@ -1,0 +1,14 @@
+
+<!DOCTYPE >
+<html>
+<head>
+</head>
+<body>
+	<h2>Student Form</h2>
+	<form action="serv" method="get">
+		<label>Name:</label><input type="text" name="name"><label>Roll
+			No.: </label> <input type="number" name="roll"> <label>Percent: </label><input type="number" name="percent">
+			<input type="submit" value="Submit">
+	</form>
+</body>
+</html>
