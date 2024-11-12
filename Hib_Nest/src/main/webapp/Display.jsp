@@ -24,7 +24,7 @@ body {
 	margin: 0;
 	padding: 0;
 	display: flex;
-	flex-direction:column;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
@@ -54,7 +54,14 @@ th {
 	color: white;
 }
 
-
+a {
+	background-color: #000000;
+	color: white;
+	padding: 0.5rem 1rem;
+	border: none;
+	cursor: pointer;
+	text-decoration: none;
+}
 </style>
 </head>
 <body>
@@ -64,6 +71,8 @@ th {
 			<th>Roll no</th>
 			<th>Name</th>
 			<th>Percent</th>
+			<th>Action</th>
+			<th>Action</th>
 		</thead>
 		<%
 		Configuration cfg = new Configuration();
@@ -80,6 +89,9 @@ th {
 			<td><%=st.getRoll()%></td>
 			<td><%=st.getName()%></td>
 			<td><%=st.getPercent()%></td>
+			<td><a href="Update.jsp?id=<%=st.getRoll()%>">Update</a></td>
+			<td><a href="Delete.jsp?id=<%=st.getRoll()%>">Delete</a></td>
+
 		</tr>
 		<%
 		}

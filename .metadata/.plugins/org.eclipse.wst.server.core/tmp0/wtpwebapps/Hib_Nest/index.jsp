@@ -64,8 +64,6 @@ input[type="submit"]:hover {
 			No.: </label> <input type="number" name="roll"> <label>Percent:
 		</label><input type="number" name="percent"> <input type="submit"
 			value="Insert">
-			<a href="Delete.jsp">Delete</a>
-			<a href="Update.jsp">Update</a>
 			<a href="Display.jsp">View Students</a>
 	</form>
 	</div>
