@@ -34,28 +34,27 @@ public class Register extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		PrintWriter pw = response.getWriter();
-		int rn = Integer.parseInt(request.getParameter("roll"));
-		String nm = request.getParameter("name");
-		int per = Integer.parseInt(request.getParameter("percent"));
+		String nm = request.getParameter("title");
+		String per = request.getParameter("msg");
 		
 		Configuration cfg =new Configuration();
 		cfg.configure();
 		SessionFactory sf =cfg.buildSessionFactory();
 		Session sess = sf.openSession();
 		
-		Student st =new Student();
-		st.setRoll(rn);
-		st.setName(nm);
-		st.setPercent(per);
+		Todo st =new Todo();
+		
+		st.setTitle(nm);
+		st.setMessage(per);
 		
 //		pw.print(nm);
 		Transaction tx =sess.beginTransaction();
 		sess.save(st);
 		
 		tx.commit();
-		response.sendRedirect("index.jsp");
+		response.sendRedirect("index.jsp?insert=success");
 
-		pw.print("Login success!");
+//		pw.print("Login success!");
 		sess.close();
 		sf.close();
 	}

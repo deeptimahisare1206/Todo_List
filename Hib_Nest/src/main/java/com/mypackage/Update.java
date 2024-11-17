@@ -37,7 +37,7 @@ public class Update extends HttpServlet {
 		PrintWriter pw = response.getWriter();
 		int rn = Integer.parseInt(request.getParameter("rolln"));
 		String nm = request.getParameter("name");
-		int per = Integer.parseInt(request.getParameter("percent"));
+	String per = request.getParameter("percent");
 		try {
 
 			Configuration cfg = new Configuration();
@@ -46,10 +46,10 @@ public class Update extends HttpServlet {
 			SessionFactory sf = cfg.buildSessionFactory();
 			Session sess = sf.openSession();
 //	    	
-			Student st = (Student) sess.get(Student.class, rn);
-			st.setRoll(rn);
-			st.setName(nm);
-			st.setPercent(per);
+			Todo st = (Todo) sess.get(Todo.class, rn);
+			//st.setRoll(rn);
+			st.setTitle(nm);
+			st.setMessage(per);
 
 			Transaction tx = sess.beginTransaction();
 			sess.update(st);

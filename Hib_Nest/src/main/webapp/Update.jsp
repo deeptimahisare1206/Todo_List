@@ -1,3 +1,4 @@
+<%@page import="com.mypackage.Todo"%>
 <%@page import="java.util.List"%>
 <%@page import="org.hibernate.query.Query"%>
 <%@page import="com.mypackage.Student"%>
@@ -74,15 +75,15 @@ input[type="submit"]:hover {
 		SessionFactory sf = cfg.buildSessionFactory();
 		Session sess = sf.openSession();
 
-		Student st = (Student)sess.get(Student.class, did);
+		Todo st = (Todo)sess.get(Todo.class, did);
 		
 		
 		%> 
 
-			<label>Roll No.: </label> <input type="number" name="rolln"
-				value="<%=did%>"> <label>Name:</label><input type="text"
-				name="name" value="<%=st.getName()%>"><label>Percent: </label><input type="number"
-				name="percent"  value="<%=st.getPercent()%>"> <input type="submit" value="Submit">
+			 <input type="hidden" name="rolln"
+				value="<%=did%>"> <label>Title:</label><input type="text"
+				name="name" value="<%=st.getTitle()%>"><label>Message: </label><input type="text"
+				name="percent"  value="<%=st.getMessage()%>"> <input type="submit" value="Submit">
 			<%-- <%
 		}
 		%> --%>

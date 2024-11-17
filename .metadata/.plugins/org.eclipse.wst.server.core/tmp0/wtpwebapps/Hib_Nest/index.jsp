@@ -17,7 +17,7 @@ place-items:center;
 	height: 100vh;
 }
 
-div{
+.container{
 padding:2rem;
 	background-color: white;
 	height: 25rem;
@@ -27,11 +27,15 @@ padding:2rem;
 form {
     width: 30rem;
     margin: 0 auto;
+    padding: 3rem 1rem;
 }
 
 label {
     display: block;
     margin: 10px 0 5px;
+    font-size:1rem;
+    font-weight:bolder;
+    
 }
 
 input[type="text"],
@@ -44,7 +48,9 @@ input[type="number"] {
 input[type="submit"] ,a{
     background-color: #4CAF50;
     color: white;
-    padding: 10px;
+    font-size:1rem;
+    font-weight:bolder;
+    padding: 1rem;
     border: none;
     cursor: pointer;
     text-decoration: none;
@@ -53,18 +59,24 @@ input[type="submit"] ,a{
 input[type="submit"]:hover {
     background-color: #45a049;
 }
+.btns{
+width: 100%;
+display: flex;
+gap:2rem;
+justify-content:center;
+}
 </style>
 </head>
 <body>
-<div>
-	<h2>Student Form</h2>
+<div class="container">
+	<h1 style="text-align: center">TODO-LIST</h1>
 
 	<form action="Register" method="get">
-		<label>Name:</label><input type="text" name="name"><label>Roll
-			No.: </label> <input type="number" name="roll"> <label>Percent:
-		</label><input type="number" name="percent"> <input type="submit"
-			value="Insert">
-			<a href="Display.jsp">View Students</a>
+		<label>Title:</label><input type="text" name="title"> <label>Message:
+		</label><input type="text" name="msg">
+		<div class="btns"> <input type="submit"
+			value="ADD">
+			<a href="Display.jsp">View All</a></div>
 	</form>
 	</div>
 </body>

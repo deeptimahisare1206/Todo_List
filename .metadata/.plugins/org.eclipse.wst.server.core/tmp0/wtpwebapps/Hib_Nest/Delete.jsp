@@ -23,7 +23,7 @@ body {
 	height: 100vh;
 }
 
-div {
+.container {
 	padding: 2rem;
 	background-color: white;
 	height: 25rem;
@@ -33,11 +33,16 @@ div {
 form {
 	width: 30rem;
 	margin: 0 auto;
+	display: grid;
+	place-items: center;
+	height: 100%;
 }
 
 label {
 	display: block;
 	margin: 10px 0 5px;
+	font-size: 2rem;
+	font-weight: bolder;
 }
 
 input[type="text"], input[type="number"] {
@@ -52,7 +57,10 @@ input[type="submit"], a {
 	padding: 10px;
 	border: none;
 	cursor: pointer;
-	text-decoration: none;
+	text-decoration: none;;
+    font-size:1rem;
+    font-weight:bolder;
+	
 }
 
 input[type="submit"]:hover {
@@ -64,15 +72,15 @@ input[type="submit"]:hover {
 	<%
 	int sid = Integer.parseInt(request.getParameter("id"));
 	%>
-	<div>
-		<h2>Delete Student</h2>
+	<div class="container">
 
 		<form action="Delete" method="get">
 
-			<label>Are You sure You want to delete Student <%=sid %>??</label>
-			 <input type="hidden"
-				name="roll" value="<%=sid%>"> 
-				<input type="submit" value="Delete">
+			<label>Are You sure You want to delete List <%=sid%>??
+			</label> <input type="hidden" name="id" value="<%=sid%>">
+			<div class="btn">
+				<input type="submit" value="Delete"> <a href="Display.jsp">Cancel</a>
+			</div>
 		</form>
 	</div>
 

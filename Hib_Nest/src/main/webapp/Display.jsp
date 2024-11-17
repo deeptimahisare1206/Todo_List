@@ -1,3 +1,4 @@
+<%@page import="com.mypackage.Todo"%>
 <%@page import="java.util.List"%>
 <%@page import="com.mypackage.Student"%>
 <%@page import="org.hibernate.query.Query"%>
@@ -25,7 +26,6 @@ body {
 	padding: 0;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	align-items: center;
 	height: 100vh;
 }
@@ -68,9 +68,9 @@ a {
 	<h1>All Students</h1>
 	<table border="1">
 		<thead>
-			<th>Roll no</th>
-			<th>Name</th>
-			<th>Percent</th>
+			<th>ID</th>
+			<th>Title</th>
+			<th>Details</th>
 			<th>Action</th>
 			<th>Action</th>
 		</thead>
@@ -80,17 +80,17 @@ a {
 		SessionFactory sf = cfg.buildSessionFactory();
 		Session sess = sf.openSession();
 
-		Query q = sess.createQuery("from Student");
-		List<Student> li = q.list();
+		Query q = sess.createQuery("from Todo");
+		List<Todo> li = q.list();
 
-		for (Student st : li) {
+		for (Todo st : li) {
 		%>
 		<tr>
-			<td><%=st.getRoll()%></td>
-			<td><%=st.getName()%></td>
-			<td><%=st.getPercent()%></td>
-			<td><a href="Update.jsp?id=<%=st.getRoll()%>">Update</a></td>
-			<td><a href="Delete.jsp?id=<%=st.getRoll()%>">Delete</a></td>
+			<td><%=st.getId()%></td>
+			<td><%=st.getTitle()%></td>
+			<td><%=st.getMessage()%></td>
+			<td><a href="Update.jsp?id=<%=st.getId()%>">Update</a></td>
+			<td><a href="Delete.jsp?id=<%=st.getId()%>">Delete</a></td>
 
 		</tr>
 		<%

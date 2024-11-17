@@ -2,6 +2,9 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="E:\7. Web_Hibernate\Hib_Nest"/>
+			<item value="E:\7. Web_Hibernate\Hib_Nest\src\main\webapp\Delete.jsp"/>
+			<item value="E:\7. Web_Hibernate\Hib_Nest\src\main\webapp\Update.jsp"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -25,12 +28,21 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.package"/>
+			<item value="com.mypackage"/>
+			<item value="com.myoackage"/>
+			<item value="com.mylist"/>
+			<item value="com.mylists"/>
 			<item value="com.myhibernate"/>
 		</list>
 		<list key="groupId">
+			<item value="Todo_note"/>
+			<item value="Todo_list"/>
 			<item value="Hib_Nest"/>
 		</list>
 		<list key="artifactId">
+			<item value="Todo_note"/>
+			<item value="Todo_list"/>
 			<item value="Hib_Nest"/>
 		</list>
 		<list key="projectNameTemplate">
