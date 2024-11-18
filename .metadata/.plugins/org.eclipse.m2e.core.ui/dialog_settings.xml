@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="E:\7. Web_Hibernate\Hib_Nest\src\main\java\com\mypackage\Search.java"/>
 			<item value="E:\7. Web_Hibernate\Hib_Nest"/>
 			<item value="E:\7. Web_Hibernate\Hib_Nest\src\main\webapp\Delete.jsp"/>
 			<item value="E:\7. Web_Hibernate\Hib_Nest\src\main\webapp\Update.jsp"/>
@@ -28,11 +29,11 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.mylists"/>
 			<item value="com.package"/>
 			<item value="com.mypackage"/>
 			<item value="com.myoackage"/>
 			<item value="com.mylist"/>
-			<item value="com.mylists"/>
 			<item value="com.myhibernate"/>
 		</list>
 		<list key="groupId">

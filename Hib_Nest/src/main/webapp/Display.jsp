@@ -1,3 +1,4 @@
+
 <%@page import="com.mypackage.Todo"%>
 <%@page import="java.util.List"%>
 <%@page import="com.mypackage.Student"%>
@@ -54,7 +55,7 @@ th {
 	color: white;
 }
 
-a {
+a , input[type="submit"]{
 	background-color: #000000;
 	color: white;
 	padding: 0.5rem 1rem;
@@ -62,10 +63,17 @@ a {
 	cursor: pointer;
 	text-decoration: none;
 }
+input[type="text"] {
+	width: 100%;
+	padding: 8px;
+	margin-bottom: 10px;
+}
 </style>
 </head>
 <body>
-	<h1>All Students</h1>
+<%@include file="Khojo.jsp" %>
+
+	<h1>All Lists</h1>
 	<table border="1">
 		<thead>
 			<th>ID</th>
