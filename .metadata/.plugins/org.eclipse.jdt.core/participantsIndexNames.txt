@@ -1,0 +1,3 @@
+INDEX VERSION 1.134
+E:\7. Web_Hibernate\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\182811018.index
+\Hib_Nest\src\main\resources

@@ -1,0 +1,10 @@
+127.0.0.1 - - [10/Nov/2024:12:11:09 +0530] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [10/Nov/2024:12:11:09 +0530] "GET /Hib_Nest/ HTTP/1.1" 200 1068
+127.0.0.1 - - [10/Nov/2024:12:11:48 +0530] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - - [10/Nov/2024:12:11:48 +0530] "GET /manager/text/ HTTP/1.1" 404 773
+127.0.0.1 - - [10/Nov/2024:12:11:48 +0530] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - - [10/Nov/2024:12:11:48 +0530] "GET /manager/text/ HTTP/1.1" 404 773
+127.0.0.1 - - [10/Nov/2024:12:11:48 +0530] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - - [10/Nov/2024:12:11:48 +0530] "GET /manager/text/ HTTP/1.1" 404 773
+127.0.0.1 - - [10/Nov/2024:12:11:48 +0530] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - - [10/Nov/2024:12:11:48 +0530] "GET /manager/text/ HTTP/1.1" 404 773
