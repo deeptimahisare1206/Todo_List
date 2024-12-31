@@ -83,12 +83,21 @@ input[type="text"] {
 			<th>Action</th>
 		</thead>
 		<%
+		
 		Configuration cfg = new Configuration();
 		cfg.configure();
 		SessionFactory sf = cfg.buildSessionFactory();
 		Session sess = sf.openSession();
+	if (request.getParameter("i") != null) {
+		i = Integer.parseInt(request.getParameter("i"));
+	}	
+	int i=0 , j=3;
+	
+	Query q = sess.createQuery("from Todo");
+		q.setFirstResult(i);
+    	q.setMaxResults(j);
+    	
 
-		Query q = sess.createQuery("from Todo");
 		List<Todo> li = q.list();
 
 		for (Todo st : li) {
@@ -107,6 +116,9 @@ input[type="text"] {
 
 
 	</table>
+	
+	<div> <a href="Display.jsp?i=<%=i+j%>">NEXT</a></div>
+<div> <a href="Display.jsp?i=<%=i-j%>">PREVIOUS</a></div>
 
 </body>
 </html>
