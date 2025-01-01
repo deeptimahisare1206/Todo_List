@@ -88,10 +88,10 @@ input[type="text"] {
 		cfg.configure();
 		SessionFactory sf = cfg.buildSessionFactory();
 		Session sess = sf.openSession();
-	int i=0 , j=3;
 	if (request.getParameter("i") != null) {
 		i = Integer.parseInt(request.getParameter("i"));
 	}	
+	int i=0 , j=3;
 	
 	Query q = sess.createQuery("from Todo");
 		q.setFirstResult(i);
