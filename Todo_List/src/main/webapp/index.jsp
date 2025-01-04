@@ -3,81 +3,111 @@
 <html>
 <head>
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing: border-box;
-
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
+
 body {
-display:grid;
-place-items:center;
 	background-color: #5acdcd;
-	gap: 2rem;
 	height: 100vh;
 }
 
-.container{
-padding:2rem;
+.nav {
+	display: flex;
+	 padding : 1rem;
 	background-color: white;
-	height: 25rem;
-	width:50vw;
+	height: 5rem;
+	padding: 1rem;
 }
 
-form {
-    width: 30rem;
-    margin: 0 auto;
-    padding: 3rem 1rem;
+.container form {
+	display: flex;
+	gap: 2rem;
+	padding: 3rem 1rem;
 }
 
-label {
-    display: block;
-    margin: 10px 0 5px;
-    font-size:1rem;
-    font-weight:bolder;
-    
-}
-
-input[type="text"],
-input[type="number"] {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-}
-
-input[type="submit"] ,a{
-    background-color: #4CAF50;
-    color: white;
-    font-size:1rem;
-    font-weight:bolder;
-    padding: 1rem;
-    border: none;
-    cursor: pointer;
-    text-decoration: none;
+input[type="text"], input[type="number"] {
+	width: 100%;
+	padding: 8px;
 }
 
 input[type="submit"]:hover {
-    background-color: #45a049;
+	background-color: #45a049;
 }
-.btns{
-width: 100%;
-display: flex;
-gap:2rem;
-justify-content:center;
+
+/* .btns {
+	width: 100%;
+	display: flex;
+	gap: 2rem;
+	justify-content: center;
+} */
+
+/* body {
+	font-family: Arial, sans-serif;
+	background-color: #5acdcd;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100vh;
+} */
+table {
+	border: 2px solid black;
+	width: 80%;
+	border-collapse: collapse;
+	background-color: white;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+	padding: 12px;
+	text-align: left;
+	border: 1px solid #ddd;
+}
+
+th {
+	background-color: #4CAF50;
+	color: white;
+}
+
+a, input[type="submit"] {
+	background-color: #000000;
+	color: white;
+	padding: 0.5rem 1rem;
+	border: none;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+input[type="text"] {
+	width: 100%;
+	padding: 8px;
+	margin-bottom: 10px;
 }
 </style>
 </head>
 <body>
-<div class="container">
-	<h1 style="text-align: center">TODO-LIST</h1>
+	<div class="nav">
+		<h1>TODO-LIST</h1>
+		<span> <%@include file="Khojo.jsp"%>
+		</span>
+	</div>
+	<div class="container">
 
-	<form action="Register" method="get">
-		<label>Title:</label><input type="text" name="title"> <label>Message:
-		</label><input type="text" name="msg">
-		<div class="btns"> <input type="submit"
-			value="ADD">
-			<a href="Display.jsp">View All</a></div>
-	</form>
+
+		<form action="Register" method="get">
+			<input type="text" name="title" placeholder="Title"> <input
+				type="text" name="msg" placeholder="Message">
+			<div class="btns">
+				<input type="submit" value="ADD">
+			</div>
+		</form>
+		<%@include file="Display.jsp"%>
+
+		<div></div>
 	</div>
 </body>
 </html>

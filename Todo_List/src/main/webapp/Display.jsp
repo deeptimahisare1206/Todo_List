@@ -12,70 +12,13 @@
 <head>
 <meta charset="UTF-8">
 <title>Show</title>
-<style>
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
 
-body {
-	font-family: Arial, sans-serif;
-	background-color: #5acdcd;
-	margin: 0;
-	padding: 0;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	height: 100vh;
-}
-
-h1 {
-	color: #333;
-	text-align: center;
-}
-
-table {
-	width: 80%;
-	margin-top: 20px;
-	border-collapse: collapse;
-	background-color: white;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-th, td {
-	padding: 12px;
-	text-align: left;
-	border: 1px solid #ddd;
-}
-
-th {
-	background-color: #4CAF50;
-	color: white;
-}
-
-a , input[type="submit"]{
-	background-color: #000000;
-	color: white;
-	padding: 0.5rem 1rem;
-	border: none;
-	cursor: pointer;
-	text-decoration: none;
-}
-input[type="text"] {
-	width: 100%;
-	padding: 8px;
-	margin-bottom: 10px;
-}
-</style>
 </head>
 <body>
-<%@include file="Khojo.jsp" %>
 
 	<h1>All Lists</h1>
 	<table border="1">
 		<thead>
-			<th>ID</th>
 			<th>Title</th>
 			<th>Details</th>
 			<th>Action</th>
@@ -102,7 +45,6 @@ input[type="text"] {
 		for (Todo st : li) {
 		%>
 		<tr>
-			<td><%=st.getId()%></td>
 			<td><%=st.getTitle()%></td>
 			<td><%=st.getMessage()%></td>
 			<td><a href="Update.jsp?id=<%=st.getId()%>">Update</a></td>
@@ -112,12 +54,12 @@ input[type="text"] {
 		<%
 		}
 		%>
-
-
+<tr>
+	<td colspan="2"> <a href="Display.jsp?i=<%=i+j%>">NEXT</a></td>
+<td colspan="2"> <a href="Display.jsp?i=<%=i-j%>">PREVIOUS</a></td>
+</tr>
 	</table>
 	
-	<div> <a href="Display.jsp?i=<%=i+j%>">NEXT</a></div>
-<div> <a href="Display.jsp?i=<%=i-j%>">PREVIOUS</a></div>
 
 </body>
 </html>
