@@ -40,6 +40,12 @@
   	<description></description>
   	<servlet-class>com.mypackage.Paginationn</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>Status</servlet-name>
+  	<display-name>Status</display-name>
+  	<description></description>
+  	<servlet-class>com.mypackage.Status</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>Register</servlet-name>
   	<url-pattern>/Register</url-pattern>
@@ -59,5 +65,9 @@
   <servlet-mapping>
   	<servlet-name>Paginationn</servlet-name>
   	<url-pattern>/Paginationn</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Status</servlet-name>
+  	<url-pattern>/Status</url-pattern>
   </servlet-mapping>
 </web-app>

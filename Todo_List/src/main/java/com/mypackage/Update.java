@@ -56,7 +56,7 @@ public class Update extends HttpServlet {
 			tx.commit();
 
 			sess.close();
-			response.sendRedirect("Display.jsp");
+			response.sendRedirect("index.jsp");
 		} catch (Exception e) {
 			// TODO: handle exception
 			pw.print(e.getMessage());

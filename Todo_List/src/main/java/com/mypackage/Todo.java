@@ -14,6 +14,7 @@ public class Todo {
 	private int id;
 	private String title;
 	private String message;
+	private int status;
 	
 	public int getId() {
 		return id;
@@ -32,6 +33,12 @@ public class Todo {
 	}
 	public void setMessage(String message) {
 		this.message = message;
+	}
+	public int getStatus() {
+		return status;
+	}
+	public void setStatus(int status) {
+		this.status = status;
 	}
 	
 

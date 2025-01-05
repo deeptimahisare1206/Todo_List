@@ -19,13 +19,8 @@
 }
 
 body {
-	font-family: Arial, sans-serif;
-	background-color: #5acdcd;
-	margin: 0;
-	padding: 0;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	background-color: #313547;
+	
 	height: 100vh;
 }
 
@@ -53,7 +48,7 @@ th {
 	color: white;
 }
 
-a , input[type="submit"]{
+ input[type="submit"]{
 	background-color: #000000;
 	color: white;
 	padding: 0.5rem 1rem;
@@ -66,17 +61,28 @@ input[type="text"] {
 	padding: 8px;
 	margin-bottom: 10px;
 }
+.nav {
+	display: flex;
+	justify-content:space-evenly;
+	 padding : 1rem;
+	background-color: #a08077;
+	height: 5rem;
+	padding: 1rem;
+}
+.nav img{
+height:3rem;
+}
 </style>
 </head>
 <body>
 <% String search= request.getParameter("searchTerm"); %>
 
-	<h1>All Students
-	<!-- <form action="Search" method="GET">
-    <input type="text" name="searchTerm" placeholder="Search....." required>
-    <input type="submit" value="Search">
-</form> -->
-</h1>
+	<div class="nav">
+		<h1>TODO-LIST</h1>
+		<span> <%@include file="Khojo.jsp"%> 
+		</span>
+		<span><a href="index.jsp"><img alt="Not Found" src="home-agreement.png"></a></span>
+	</div>
 	<table border="1">
 		<thead>
 			<th>ID</th>

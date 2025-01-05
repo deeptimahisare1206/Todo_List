@@ -15,12 +15,11 @@
 
 </head>
 <body>
-
-	<h1>All Lists</h1>
 	<table border="1">
 		<thead>
 			<th>Title</th>
 			<th>Details</th>
+			<th>Status</th>
 			<th>Action</th>
 			<th>Action</th>
 		</thead>
@@ -30,7 +29,9 @@
 		cfg.configure();
 		SessionFactory sf = cfg.buildSessionFactory();
 		Session sess = sf.openSession();
-	int i=0 , j=3;
+	int i=0 , j=5;
+
+	
 	if (request.getParameter("i") != null) {
 		i = Integer.parseInt(request.getParameter("i"));
 	}	
@@ -47,16 +48,18 @@
 		<tr>
 			<td><%=st.getTitle()%></td>
 			<td><%=st.getMessage()%></td>
+			<td><a href="Status?id=<%=st.getId()%>&status=<%=st.getStatus()%>" style="background-color: <%= st.getStatus() == 0 ? "red" : "green" %>;"><%= st.getStatus() == 0?"Pending" : "Completed"%></a></td>
 			<td><a href="Update.jsp?id=<%=st.getId()%>">Update</a></td>
-			<td><a href="Delete.jsp?id=<%=st.getId()%>">Delete</a></td>
+			<td><a href="Delete?id=<%=st.getId()%>">Delete</a></td>
 
 		</tr>
 		<%
 		}
+		
 		%>
 <tr>
-	<td colspan="2"> <a href="Display.jsp?i=<%=i+j%>">NEXT</a></td>
-<td colspan="2"> <a href="Display.jsp?i=<%=i-j%>">PREVIOUS</a></td>
+<td colspan="2" style="text-align: center"> <a href="index.jsp?i=<%=i-j%>">PREVIOUS</a></td>
+	<td colspan="3"style="text-align: center"> <a href="index.jsp?i=<%=i+j%>">NEXT</a></td>
 </tr>
 	</table>
 	

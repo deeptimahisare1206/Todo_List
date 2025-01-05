@@ -52,7 +52,7 @@ public class Register extends HttpServlet {
 		sess.save(st);
 		
 		tx.commit();
-		response.sendRedirect("index.jsp?insert=success");
+		response.sendRedirect("index.jsp");
 
 //		pw.print("Login success!");
 		sess.close();

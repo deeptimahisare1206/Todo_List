@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<form action="View.jsp">
+<form action="View.jsp" style="display:flex;gap:2rem">
     <input type="text" name="searchTerm" placeholder="Search....." required>
     <input type="submit" value="Search">
 </form>

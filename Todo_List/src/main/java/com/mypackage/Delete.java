@@ -35,7 +35,7 @@ public class Delete extends HttpServlet {
 		// TODO Auto-generated method stub
 		PrintWriter pw = response.getWriter();
 //		pw.print("<h1>Delete</h1>");
-		int roll = Integer.parseInt(request.getParameter("id"));
+		int sid = Integer.parseInt(request.getParameter("id"));
 		
 		Configuration cfg = new Configuration();
 		cfg.configure();
@@ -44,7 +44,7 @@ public class Delete extends HttpServlet {
 		Session sess = sf.openSession();
 		
 		Todo st = new Todo();
-		st.setId(roll);
+		st.setId(sid);
 		
 		Transaction tx = sess.beginTransaction();
 		sess.delete(st);
@@ -53,7 +53,7 @@ public class Delete extends HttpServlet {
 		
 		sess.close();
 		sf.close();
-		response.sendRedirect("Display.jsp");
+		response.sendRedirect("index.jsp");
 		
 	}
 

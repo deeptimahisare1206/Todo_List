@@ -10,22 +10,24 @@
 }
 
 body {
-	background-color: #5acdcd;
+	background-color: #313547;
 	height: 100vh;
 }
 
 .nav {
 	display: flex;
+	justify-content:space-evenly;
 	 padding : 1rem;
-	background-color: white;
+	background-color: #a08077;
 	height: 5rem;
 	padding: 1rem;
 }
 
 .container form {
+width:80%;
 	display: flex;
 	gap: 2rem;
-	padding: 3rem 1rem;
+	padding: 3rem;
 }
 
 input[type="text"], input[type="number"] {
@@ -37,28 +39,10 @@ input[type="submit"]:hover {
 	background-color: #45a049;
 }
 
-/* .btns {
-	width: 100%;
-	display: flex;
-	gap: 2rem;
-	justify-content: center;
-} */
-
-/* body {
-	font-family: Arial, sans-serif;
-	background-color: #5acdcd;
-	margin: 0;
-	padding: 0;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	height: 100vh;
-} */
 table {
-	border: 2px solid black;
 	width: 80%;
 	border-collapse: collapse;
-	background-color: white;
+	background-color:white ;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -87,6 +71,11 @@ input[type="text"] {
 	padding: 8px;
 	margin-bottom: 10px;
 }
+
+.display{
+	display:flex;
+	justify-content: center;
+}
 </style>
 </head>
 <body>
@@ -105,9 +94,10 @@ input[type="text"] {
 				<input type="submit" value="ADD">
 			</div>
 		</form>
-		<%@include file="Display.jsp"%>
-
-		<div></div>
+		<div class="display">
+		 <%@include file="Display.jsp"%>
+		
+		</div>
 	</div>
 </body>
 </html>
