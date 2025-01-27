@@ -5,5 +5,6 @@
   <li>Update</li>
   <li>See All</li>
   <li>Serach Bar</li>
+  <li>Pagination</li>
 </ul>
 
