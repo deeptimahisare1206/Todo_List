@@ -88,8 +88,8 @@ input[type="text"] {
 
 
 		<form action="Register" method="get">
-			<input type="text" name="title" placeholder="Title"> <input
-				type="text" name="msg" placeholder="Message">
+			<input type="text" name="title" placeholder="Title" required> <input
+				type="text" name="msg" placeholder="Message" required>
 			<div class="btns">
 				<input type="submit" value="ADD">
 			</div>
