@@ -7,4 +7,4 @@
   <li>Serach Bar</li>
   <li>Pagination</li>
 </ul>
-
+<p>Tailwind CSS, Maven, Hibernate.</p>
