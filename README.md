@@ -8,4 +8,3 @@
   <li>Pagination</li>
   <li>Status update - completed or pending </li>
 </ul>
-<p>Tailwind CSS, Maven, Hibernate.</p>
