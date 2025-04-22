@@ -8,4 +8,5 @@ A website that can manage all your tasks
   <li>Serach Bar</li>
   <li>Pagination</li>
   <li>Status update - completed or pending </li>
-</ul>
+</ul> <br>
+Todo:- There is an error in runing the project
