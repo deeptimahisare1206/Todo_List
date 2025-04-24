@@ -19,11 +19,7 @@ import jakarta.servlet.http.HttpServletResponse;
 public class Delete extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	/**
-	 * Default constructor.
-	 */
 	public Delete() {
-		// TODO Auto-generated constructor stub
 	}
 
 	/**
