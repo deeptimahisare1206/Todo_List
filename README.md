@@ -1,12 +1,23 @@
-<h1>Todo-List Management</h1>
-A website that can manage all your tasks
-<ul>
-  <li>Insert</li>
-  <li>Delete</li>
-  <li>Update</li>
-  <li>See All</li>
-  <li>Serach Bar</li>
-  <li>Pagination</li>
-  <li>Status update - completed or pending </li>
-</ul> <br>
-Todo:- There is an error in runing the project
+# 📝 Todo-List Management
+
+A simple and efficient web application to manage all your daily tasks. This project includes essential CRUD operations and additional features like status tracking, search, and pagination to enhance usability.
+
+## 🔧 Features
+
+- **Add Task** – Insert new tasks with relevant details.
+- **Delete Task** – Remove completed or unnecessary tasks.
+- **Update Task** – Edit existing task information.
+- **View All Tasks** – Display a list of all current tasks.
+- **Search Bar** – Quickly find tasks by keywords.
+- **Pagination** – Navigate through large lists with ease.
+- **Status Update** – Mark tasks as `Completed` or `Pending`.
+
+## 🛠 Tech Stack
+
+- Frontend: *Spring MVC*
+- Backend: *Spring*
+- Database: *MySQL*
+
+## 🚧 Current Issue
+
+>> ⚠️ **Note:** There is currently an error preventing the project from running. The issue is under investigation.
