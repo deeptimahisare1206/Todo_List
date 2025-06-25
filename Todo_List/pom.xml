@@ -19,7 +19,12 @@
     <artifactId>hibernate-core</artifactId>
     <version>6.4.10.Final</version>
 </dependency>
-
+<dependency>
+    <groupId>jakarta.servlet</groupId>
+    <artifactId>jakarta.servlet-api</artifactId>
+    <version>5.0.0</version> <!-- Match your Jakarta EE version -->
+    <scope>provided</scope>
+</dependency>
 
     <dependency>
       <groupId>junit</groupId>
